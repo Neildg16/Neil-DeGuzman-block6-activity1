@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF4DE"
+    tools:context=".RegisterFragment">
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.8"
+            android:background="#000000" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true" />
+
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/imgbtnBackSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@null"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/md_theme_light_primary" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvRegisterParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        app:cardBackgroundColor="#B1D090"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="315dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etEmailLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:hint="@string/email"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="#77000000"
+                        app:errorIconDrawable="@null">
+
+                        <!--                        <com.google.android.material.textfield.TextInputEditText-->
+                        <!--                            android:id="@+id/etEmailSignUp"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="match_parent"-->
+                        <!--                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ._-1234567890@"-->
+                        <!--                            android:inputType="text"-->
+                        <!--                            android:maxLines="1"-->
+                        <!--                            android:maxLength="32"-->
+                        <!--                            android:textSize="11sp" />-->
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmailSignUp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ._-1234567890@"
+                            android:inputType="textEmailAddress"
+                            android:maxLength="32"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textSize="14sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etFullNameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:hint="@string/full_name"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="#77000000"
+                        app:errorIconDrawable="@null">
+
+                        <!--                        <com.google.android.material.textfield.TextInputEditText-->
+                        <!--                            android:id="@+id/etFullNameSignUp"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:scrollHorizontally="true"-->
+                        <!--                            android:ellipsize="end"-->
+                        <!--                            android:maxLines="1"-->
+                        <!--                            android:layout_height="match_parent"-->
+                        <!--                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"-->
+                        <!--                            android:inputType="textPersonName"-->
+                        <!--                            android:maxLength="50"-->
+                        <!--                            android:textSize="11sp" />-->
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etFullNameSignUp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                            android:inputType="textPersonName"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textSize="14sp" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="15dp"
+                            android:hint=" +63"
+                            android:minEms="6"
+                            app:boxBackgroundColor="#11000000">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:drawableStart="@drawable/philippines"
+                                android:enabled="false"
+                                android:inputType="phone"
+                                android:textSize="14sp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/etPhoneNumberLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/phone_number"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="10"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="#77000000"
+                            app:errorIconDrawable="@null"
+                            app:helperText="(Optional)">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etPhoneNumberSignUp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:digits="0123456789"
+                                android:inputType="phone"
+                                android:maxLength="11"
+                                android:singleLine="true"
+                                android:textSize="14sp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etPasswordLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:hint="@string/password"
+                        app:endIconMode="password_toggle"
+                        app:endIconTint="#77000000"
+                        app:errorEnabled="true"
+                        app:errorIconDrawable="@null">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPasswordSignUp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="textPassword"
+                            android:maxLength="255"
+                            android:textSize="14sp"
+                            app:errorIconDrawable="@null" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etConfirmPasswordLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:hint="@string/repeat_password"
+                        app:endIconMode="password_toggle"
+                        app:endIconTint="#77000000"
+                        app:errorEnabled="true"
+                        app:errorIconDrawable="@null">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etRepeatPasswordSignUp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="textPassword"
+                            android:maxLength="255"
+                            android:textSize="14sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btnSignUpSignUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="60dp"
+                        android:text="@string/sign_up" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/sign_up"
+        android:textColor="@color/md_theme_light_primary"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toTopOf="@+id/cvRegisterParent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="-20dp"
+        android:src="@drawable/outline_person"
+        app:layout_constraintBottom_toTopOf="@+id/cvRegisterParent"
+        app:layout_constraintEnd_toEndOf="@+id/cvRegisterParent"
+        app:tint="@color/md_theme_light_primary" />
+
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginBottom="-10dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/cvRegisterParent"-->
+    <!--        app:cardCornerRadius="20dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/cvRegisterParent"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/cvRegisterParent">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:paddingStart="20dp"-->
+    <!--            android:gravity="center"-->
+    <!--            android:paddingEnd="20dp"-->
+    <!--            android:paddingTop="5dp"-->
+    <!--            android:paddingBottom="5dp"-->
+    <!--            android:orientation="horizontal">-->
+
+    <!--            -->
+    <!--        </LinearLayout>-->
+    <!--    </androidx.cardview.widget.CardView>-->
+</androidx.constraintlayout.widget.ConstraintLayout>
